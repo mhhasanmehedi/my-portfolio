@@ -1,0 +1,49 @@
+.skill {
+  padding: 80px 0;
+  &__wrapIn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 1px;
+      background-color: $primary-color;
+      transition: 0.4s;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 0%;
+      height: 1px;
+      background-color: $primary-color;
+      transition: 0.4s;
+    }
+    &:hover::after,
+    &:hover::before {
+      width: 100%;
+    }
+    h4 {
+      font-size: 1.6em;
+      letter-spacing: 1px;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.social {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $section-title;
+  padding: 20px 5px;
+  z-index: 100;
+  & > span {
+    display: block;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: 200;
+    font-size: 1.6em;
+    letter-spacing: 3px;
+    margin-bottom: 70px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -60px;
+      height: 50px;
+      width: 1px;
+      background-color: gray;
+    }
+  }
+  &__wrapIn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      width: 20px;
+      color: $primary-color;
+      text-decoration: none;
+      transition: 0.4s;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: rotate(45deg);
+        left: 0;
+        top: 0;
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        transition: 0.4s;
+      }
+      &:hover {
+        &::after {
+          transform: rotate(0deg);
+        }
+      }
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// Flex mixin
+@mixin Flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+// pseudo mixin
+@mixin pseudo {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}

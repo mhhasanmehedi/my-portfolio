@@ -1,0 +1,59 @@
+.contact {
+  padding: 80px 0;
+  .contact__wrapIn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    .input-box {
+      width: 750px;
+      position: relative;
+      input,
+      textarea {
+        height: 50px;
+        width: 100%;
+        padding: 20px;
+        font-size: 1.8em;
+        color: white;
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        outline: none;
+        // &:focus + label,
+        // &:valid + label {
+        //   top: 0px;
+        //   font-size: 1.3em;
+        //   background-color: $bg-color;
+        // }
+      }
+      label {
+        position: absolute;
+        left: 0;
+        top: -10px;
+        background-color: $bg-color;
+        pointer-events: none;
+        font-size: 1.3em;
+        margin-left: 1em;
+        transition: 0.4s;
+        padding: 0 10px;
+      }
+      textarea {
+        resize: none;
+        height: 100px;
+      }
+    }
+    .send-btn {
+      display: inline-block;
+      margin: auto;
+      padding: 15px 30px;
+      width: 250px;
+      background-color: $primary-color;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 1.6em;
+      transition: 0.4s;
+      &:hover {
+        letter-spacing: 6px;
+      }
+    }
+  }
+}
